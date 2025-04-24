@@ -43,4 +43,6 @@ export default function NebulaOneROICalculator() {
   };
 
   const baseline = (
-    (+inputs
+    (+inputs.sanitationCost || 0) +
+    (+inputs.outbreaksPerYear * +inputs.outbreakCost || 0) +
+    (+inputs.s
